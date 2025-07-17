@@ -167,34 +167,34 @@ export default function InvestmentSandbox({
 
   const strategies = [
     {
-      id: "institutional-hold",
-      name: "Institutional Hold",
+      id: "fixed-rate",
+      name: "Fixed-Rate Loan",
       icon: "🏛️",
-      desc: "Long-term value creation",
+      desc: "Stable long-term financing",
     },
     {
-      id: "value-add",
-      name: "Value-Add",
-      icon: "📈",
-      desc: "Strategic improvements",
-    },
-    {
-      id: "core-plus",
-      name: "Core Plus",
-      icon: "⭐",
-      desc: "Stabilized assets",
-    },
-    {
-      id: "opportunistic",
-      name: "Opportunistic",
-      icon: "🎯",
-      desc: "High-risk, high-reward",
-    },
-    {
-      id: "bridge-debt",
-      name: "Bridge Strategy",
+      id: "bridge-loan",
+      name: "Bridge Loan",
       icon: "🌉",
-      desc: "Transitional financing",
+      desc: "Short-term transitional funding",
+    },
+    {
+      id: "construction",
+      name: "Construction Loan",
+      icon: "🏗️",
+      desc: "Development financing",
+    },
+    {
+      id: "commercial",
+      name: "Commercial Loan",
+      icon: "🏢",
+      desc: "Business property financing",
+    },
+    {
+      id: "investment",
+      name: "Investment Property",
+      icon: "📈",
+      desc: "Rental property loans",
     },
   ];
 
