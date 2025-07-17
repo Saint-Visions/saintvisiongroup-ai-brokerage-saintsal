@@ -73,6 +73,16 @@ export default function Hero({
       {/* Content */}
       <div className="hero-content relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="max-w-4xl mx-auto">
+          {/* SaintSAL Logo */}
+          <div className="hero-logo mb-8">
+            <SaintSALLogo
+              variant="combined"
+              size="lg"
+              showTagline={true}
+              className="mb-4"
+            />
+          </div>
+
           <h1 className="hero-title text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight">
             {title}
           </h1>
