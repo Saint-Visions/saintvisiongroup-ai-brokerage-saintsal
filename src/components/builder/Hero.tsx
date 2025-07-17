@@ -96,12 +96,12 @@ export default function Hero({
           <div
             className={`mb-12 transition-all duration-1000 ${isLoaded ? "opacity-100 transform translate-y-0" : "opacity-0 transform translate-y-8"}`}
           >
-            <SaintSALLogo
-              variant="saint-vision"
-              size="lg"
-              showTagline={false}
-              className="mb-6"
-            />
+            <div className="text-center mb-6">
+              <h1 className="text-6xl font-bold text-gradient-gold mb-4">
+                Saint Vision Group
+              </h1>
+              <div className="text-lg text-gold-400 font-medium">LLC</div>
+            </div>
             <div className="text-caption text-neutral-400 tracking-wider">
               LICENSED COMMERCIAL LENDER • REAL ESTATE FINANCING
             </div>
