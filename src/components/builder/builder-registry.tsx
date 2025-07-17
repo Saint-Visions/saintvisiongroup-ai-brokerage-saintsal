@@ -1,6 +1,6 @@
 "use client";
 
-import { builder } from "@builder.io/react";
+import { builder, Builder } from "@builder.io/react";
 import Hero from "./Hero";
 import CTA from "./CTA";
 import Footer from "./Footer";
