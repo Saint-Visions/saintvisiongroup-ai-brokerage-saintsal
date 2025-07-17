@@ -1,4 +1,4 @@
-import "../components/builder/builder-registry";
+// Removed builder registry to fix build issues
 import Hero from "../components/builder/Hero";
 import CTA from "../components/builder/CTA";
 import InvestmentSandbox from "../components/builder/InvestmentSandbox";
