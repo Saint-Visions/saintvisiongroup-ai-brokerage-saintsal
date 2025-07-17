@@ -1,6 +1,10 @@
+import React from "react";
 import { builder, BuilderComponent } from "@builder.io/react";
 
-builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY!);
+// Only initialize if API key exists
+if (process.env.NEXT_PUBLIC_BUILDER_API_KEY) {
+  builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY);
+}
 
 export async function generateStaticParams() {
   const pages = await builder.getAll("page", {
