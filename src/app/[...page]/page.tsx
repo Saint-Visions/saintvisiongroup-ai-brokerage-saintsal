@@ -28,17 +28,26 @@ export default async function Page({
 }: {
   params: Promise<{ page: string[] }>;
 }) {
-  const resolvedParams = await params;
-  const urlPath = "/" + (resolvedParams?.page?.join("/") || "");
-  const page = await builder.get("page", { url: urlPath });
+  try {
+    if (!process.env.NEXT_PUBLIC_BUILDER_API_KEY) {
+      return <div>Page not found</div>;
+    }
 
-  return (
-    <>
-      {page ? (
-        <BuilderComponent model="page" content={page} />
-      ) : (
-        <div>404 Not Found</div>
-      )}
-    </>
-  );
+    const resolvedParams = await params;
+    const urlPath = "/" + (resolvedParams?.page?.join("/") || "");
+    const page = await builder.get("page", { url: urlPath });
+
+    return (
+      <>
+        {page ? (
+          <BuilderComponent model="page" content={page} />
+        ) : (
+          <div>404 Not Found</div>
+        )}
+      </>
+    );
+  } catch (error) {
+    console.warn("Failed to load Builder.io page:", error);
+    return <div>Page not found</div>;
+  }
 }
