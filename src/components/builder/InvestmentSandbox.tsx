@@ -160,8 +160,15 @@ export default function InvestmentSandbox({
   };
 
   return (
-    <section className={`sandbox-section py-16 ${backgroundColor}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className={`sandbox-section py-16 ${backgroundColor} relative`}>
+      {/* Strategic Background */}
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-5"
+        style={{
+          backgroundImage: `url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F1005f14aff024d168dcd72d638634d3a?format=webp&width=800)`,
+        }}
+      />
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="sandbox-header text-center mb-12">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
