@@ -67,6 +67,34 @@ export default function SaintSALLogo({
             className={`${sizeClasses[size]} ${className}`}
           />
         );
+      case "saint-vision":
+        return (
+          <img
+            src={saintVisionMainUrl}
+            alt="Saint Vision Group LLC"
+            className={`${sizeClasses[size]} ${className}`}
+          />
+        );
+      case "combined":
+        return (
+          <div className={`flex items-center gap-6 ${className}`}>
+            <img
+              src={saintVisionIconUrl}
+              alt="Saint Vision Group"
+              className="w-16 h-16"
+            />
+            <div className="flex flex-col">
+              <h1 className="text-3xl font-bold bg-gradient-to-r from-yellow-400 via-yellow-600 to-yellow-800 bg-clip-text text-transparent">
+                SAINTSAL™
+              </h1>
+              {showTagline && (
+                <p className="text-lg text-yellow-600 font-light">
+                  Powered by Saint Vision Group
+                </p>
+              )}
+            </div>
+          </div>
+        );
       case "full":
       default:
         return (
