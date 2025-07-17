@@ -71,6 +71,63 @@ export default function InvestmentSandbox({
 
   const [activeStrategy, setActiveStrategy] = useState("buy-hold");
 
+  const calculateDealMetrics = () => {
+    const downPaymentAmount =
+      (dealData.purchasePrice * dealData.downPayment) / 100;
+    const loanAmount = dealData.purchasePrice - downPaymentAmount;
+
+    // Monthly payment calculation
+    const monthlyRate = dealData.interestRate / 100 / 12;
+    const numberOfPayments = dealData.loanTerm * 12;
+    const monthlyPayment =
+      (loanAmount *
+        (monthlyRate * Math.pow(1 + monthlyRate, numberOfPayments))) /
+      (Math.pow(1 + monthlyRate, numberOfPayments) - 1);
+
+    // Monthly income (accounting for vacancy)
+    const monthlyIncome =
+      dealData.monthlyRent * (1 - dealData.vacancyRate / 100);
+
+    // Monthly expenses
+    const monthlyExpenses =
+      monthlyPayment +
+      dealData.propertyTaxes / 12 +
+      dealData.insurance / 12 +
+      dealData.maintenance / 12;
+
+    // Cash flow
+    const monthlyCashFlow = monthlyIncome - monthlyExpenses;
+    const annualCashFlow = monthlyCashFlow * 12;
+
+    // Total investment
+    const totalInvestment =
+      downPaymentAmount + dealData.rehabCosts + dealData.closingCosts;
+
+    // Returns
+    const cashOnCashReturn =
+      totalInvestment > 0 ? (annualCashFlow / totalInvestment) * 100 : 0;
+    const annualIncome =
+      dealData.monthlyRent * 12 * (1 - dealData.vacancyRate / 100);
+    const annualExpenses =
+      dealData.propertyTaxes + dealData.insurance + dealData.maintenance;
+    const noi = annualIncome - annualExpenses;
+    const cap =
+      dealData.purchasePrice > 0 ? (noi / dealData.purchasePrice) * 100 : 0;
+    const roi = totalInvestment > 0 ? (noi / totalInvestment) * 100 : 0;
+
+    setResults({
+      monthlyPayment,
+      totalInvestment,
+      monthlyIncome,
+      monthlyExpenses,
+      monthlyCashFlow,
+      annualCashFlow,
+      cashOnCashReturn,
+      cap,
+      roi,
+    });
+  };
+
   useEffect(() => {
     calculateDealMetrics();
   }, [dealData]);
