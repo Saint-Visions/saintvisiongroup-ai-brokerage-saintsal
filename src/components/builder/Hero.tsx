@@ -94,7 +94,7 @@ export default function Hero({
           <div className="hero-actions flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <button
               onClick={handlePrimaryAction}
-              className="primary-cta-button bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              className="primary-cta-button bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-black font-bold px-10 py-4 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl border-2 border-yellow-400"
             >
               {primaryButtonText}
             </button>
@@ -102,7 +102,7 @@ export default function Hero({
             {secondaryButtonText && (
               <button
                 onClick={() => setIsVideoModalOpen(true)}
-                className="secondary-cta-button border-2 border-white text-white hover:bg-white hover:text-gray-900 font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 transform hover:scale-105"
+                className="secondary-cta-button border-2 border-yellow-400 text-yellow-300 hover:bg-yellow-400 hover:text-black font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm"
               >
                 {secondaryButtonText}
               </button>
