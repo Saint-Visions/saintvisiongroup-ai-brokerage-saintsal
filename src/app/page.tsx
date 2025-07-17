@@ -29,13 +29,13 @@ export default function Home() {
 
       {/* CTA Section */}
       <CTA
-        title="Ready to Transform Your Real Estate Investments?"
-        description="Join thousands of investors already using SaintSAL™ to maximize their returns with AI-powered insights and automation."
-        buttonText="Get Started Today"
+        title="Ready to Elevate Your Investment Strategy?"
+        description="Join elite investors already using Saint Vision Group's strategic intelligence to maximize their returns with AI-powered insights and professional-grade automation."
+        buttonText="Access Strategic Platform"
         buttonStyle="primary"
         action="modal"
-        backgroundColor="bg-gradient-to-r from-blue-600 to-purple-600"
-        textColor="text-white"
+        backgroundColor="bg-gradient-to-r from-yellow-600 to-yellow-700"
+        textColor="text-black"
         showForm={true}
       />
 
