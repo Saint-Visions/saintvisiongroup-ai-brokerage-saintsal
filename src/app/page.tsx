@@ -10,18 +10,18 @@ export default function Home() {
     <main className="homepage">
       {/* Hero Section */}
       <Hero
-        title="Saint Vision Group™"
-        subtitle="Premier real estate brokerage powered by SaintSAL™ AI. Where human expertise meets cutting-edge intelligence to deliver exceptional investment results."
-        primaryButtonText="Start Your Journey"
+        title="Saint Vision Group LLC"
+        subtitle="Premier real estate lending and commercial financing solutions. Fixed-rate loans, bridge financing, construction loans, and investment opportunities powered by SaintSAL™ AI lending intelligence."
+        primaryButtonText="Apply for Financing"
         primaryButtonAction="application"
-        secondaryButtonText="Meet SaintSAL™ AI"
+        secondaryButtonText="View Loan Programs"
         showVideo={true}
       />
 
       {/* Investment Sandbox Preview */}
       <InvestmentSandbox
-        title="SaintSAL™ Investment Intelligence"
-        subtitle="Our proprietary AI analyzes deals, models scenarios, and identifies high-return opportunities with institutional-grade precision"
+        title="Loan Calculator & Financing Tools"
+        subtitle="Calculate rates, analyze loan terms, and explore our comprehensive lending programs for real estate and commercial projects"
         showCalculator={true}
         showComparison={true}
         backgroundColor="bg-neutral-50"
@@ -29,9 +29,9 @@ export default function Home() {
 
       {/* CTA Section */}
       <CTA
-        title="Experience the Saint Vision Group Advantage"
-        description="Join successful investors who trust Saint Vision Group's proven expertise combined with SaintSAL™ AI technology to achieve superior real estate returns."
-        buttonText="Schedule Consultation"
+        title="Ready to Secure Your Real Estate Financing?"
+        description="Join thousands of borrowers who trust Saint Vision Group for competitive fixed rates, flexible terms, and expert lending solutions backed by SaintSAL™ AI technology."
+        buttonText="Get Pre-Approved"
         buttonStyle="primary"
         action="modal"
         backgroundColor="bg-gradient-to-br from-primary-950 via-neutral-900 to-primary-900"
@@ -41,8 +41,8 @@ export default function Home() {
 
       {/* Application Form Section */}
       <FormSection
-        title="Partner with Saint Vision Group"
-        subtitle="Begin your real estate investment journey with our expert team and SaintSAL™ AI technology"
+        title="Loan Application"
+        subtitle="Start your financing application with Saint Vision Group. Our SaintSAL™ AI technology streamlines the approval process for faster decisions."
         formType="application"
         showSteps={true}
         backgroundColor="bg-neutral-50"
