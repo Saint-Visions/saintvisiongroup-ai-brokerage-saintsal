@@ -7,12 +7,20 @@ if (process.env.NEXT_PUBLIC_BUILDER_API_KEY) {
 }
 
 export async function generateStaticParams() {
-  const pages = await builder.getAll("page", {
-    options: { noTargeting: true },
-  });
-  return pages.map((page) => ({
-    page: page.data?.url?.slice(1)?.split("/") || [],
-  }));
+  try {
+    if (!process.env.NEXT_PUBLIC_BUILDER_API_KEY) {
+      return [];
+    }
+    const pages = await builder.getAll("page", {
+      options: { noTargeting: true },
+    });
+    return pages.map((page) => ({
+      page: page.data?.url?.slice(1)?.split("/") || [],
+    }));
+  } catch (error) {
+    console.warn("Failed to generate static params from Builder.io:", error);
+    return [];
+  }
 }
 
 export default async function Page({
