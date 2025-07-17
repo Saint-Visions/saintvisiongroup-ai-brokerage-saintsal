@@ -1,7 +1,7 @@
 "use client";
 
 interface SaintSALLogoProps {
-  variant?: "brain" | "text" | "icon" | "full";
+  variant?: "brain" | "text" | "icon" | "full" | "saint-vision" | "combined";
   size?: "sm" | "md" | "lg" | "xl";
   showTagline?: boolean;
   className?: string;
