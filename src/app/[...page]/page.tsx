@@ -11,8 +11,13 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function Page({ params }: { params: { page: string[] } }) {
-  const urlPath = "/" + (params?.page?.join("/") || "");
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ page: string[] }>;
+}) {
+  const resolvedParams = await params;
+  const urlPath = "/" + (resolvedParams?.page?.join("/") || "");
   const page = await builder.get("page", { url: urlPath });
 
   return (
