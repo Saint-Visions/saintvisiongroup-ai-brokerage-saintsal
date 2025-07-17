@@ -20,6 +20,7 @@ export default function SaintSALLogo({
     xl: "w-80 h-auto",
   };
 
+  // SaintSAL AI Brain Logos
   const brainLogoUrl =
     "https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Ffa3f3e1df565442a9a90d129980f9189?format=webp&width=800";
   const fullLogoUrl =
@@ -28,6 +29,12 @@ export default function SaintSALLogo({
     "https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F8431113cce644af2a26bcc768adb8c99?format=webp&width=800";
   const iconUrl =
     "https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F2eba2bc73e0d4ac1a50feb65cfd998e6?format=webp&width=800";
+
+  // Saint Vision Group Logos
+  const saintVisionMainUrl =
+    "https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F5f271dccba1842b8aa1fa4698a9ef3e4?format=webp&width=800";
+  const saintVisionIconUrl =
+    "https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F375e4214aa0147a9a3b456427f75c769?format=webp&width=800";
 
   const renderLogo = () => {
     switch (variant) {
