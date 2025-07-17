@@ -50,13 +50,13 @@ export default function Home() {
 
       {/* Footer */}
       <Footer
-        companyName="SaintSAL™"
-        tagline="AI-Powered Real Estate Brokerage"
+        companyName="Saint Vision Group"
+        tagline="Strategic Real Estate Intelligence"
         showSocialLinks={true}
         showContactInfo={true}
         backgroundColor="bg-gray-900"
         textColor="text-gray-300"
-        accentColor="text-blue-400"
+        accentColor="text-yellow-400"
       />
     </main>
   );
