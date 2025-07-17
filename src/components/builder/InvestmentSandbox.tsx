@@ -189,8 +189,8 @@ export default function InvestmentSandbox({
                 onClick={() => setActiveStrategy(strategy.id)}
                 className={`strategy-button flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
                   activeStrategy === strategy.id
-                    ? "bg-blue-600 text-white shadow-lg"
-                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                    ? "bg-gradient-to-r from-yellow-500 to-yellow-600 text-black shadow-lg border-2 border-yellow-400"
+                    : "bg-gray-100 text-gray-700 hover:bg-yellow-50 hover:border-yellow-300 border-2 border-transparent"
                 }`}
               >
                 <span className="text-xl">{strategy.icon}</span>
