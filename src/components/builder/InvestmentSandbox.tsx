@@ -46,8 +46,8 @@ interface MarketData {
 }
 
 export default function InvestmentSandbox({
-  title = "Investment Intelligence Sandbox",
-  subtitle = "Advanced AI-powered deal analysis with institutional-grade metrics and predictive modeling",
+  title = "Loan Calculator & Financing Tools",
+  subtitle = "Calculate loan payments, compare rates, and explore our comprehensive lending programs with SaintSAL™ AI assistance",
   showCalculator = true,
   showComparison = true,
   backgroundColor = "bg-neutral-50",
