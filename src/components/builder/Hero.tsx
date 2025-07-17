@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import SaintSALLogo from "./SaintSALLogo";
 
 interface HeroProps {
   title?: string;
