@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import SaintSALLogo from "./SaintSALLogo";
 
 interface HeroProps {
@@ -15,138 +15,261 @@ interface HeroProps {
 }
 
 export default function Hero({
-  title = "SaintSAL™ - AI-Powered Real Estate Brokerage",
-  subtitle = "Transform your real estate investments with AI-driven automation, advanced analytics, and seamless CRM integration. Join the future of property investment.",
-  primaryButtonText = "Start Your Investment Journey",
+  title = "Strategic Real Estate Intelligence",
+  subtitle = "Institutional-grade AI platform trusted by elite investors to maximize returns through data-driven insights and strategic automation.",
+  primaryButtonText = "Access Platform",
   primaryButtonAction = "application",
-  secondaryButtonText = "Watch Demo",
+  secondaryButtonText = "View Intelligence Demo",
   backgroundVideo,
   backgroundImage,
   showVideo = true,
 }: HeroProps) {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
 
   const handlePrimaryAction = () => {
     if (primaryButtonAction === "application") {
-      // Trigger application form/modal
-      console.log("Opening application form");
+      document
+        .getElementById("application-form")
+        ?.scrollIntoView({ behavior: "smooth" });
     } else if (primaryButtonAction === "sandbox") {
-      // Navigate to investment sandbox
-      window.location.href = "/investment-sandbox";
+      document
+        .getElementById("investment-sandbox")
+        ?.scrollIntoView({ behavior: "smooth" });
     }
   };
 
+  const handleSecondaryAction = () => {
+    setIsVideoModalOpen(true);
+  };
+
   return (
-    <section className="hero-section relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Video/Image */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-neutral-950 via-primary-950 to-neutral-900">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-600/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gold-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-3xl animate-pulse delay-2000" />
+      </div>
+
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div
+          className="w-full h-full"
+          style={{
+            backgroundImage: `radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+            backgroundSize: "50px 50px",
+          }}
+        />
+      </div>
+
+      {/* Premium Background Video/Image */}
       {backgroundVideo && showVideo ? (
         <video
           autoPlay
           muted
           loop
-          className="absolute inset-0 w-full h-full object-cover"
-          style={{ zIndex: -2 }}
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover opacity-20"
+          style={{ zIndex: -1 }}
         >
           <source src={backgroundVideo} type="video/mp4" />
         </video>
       ) : backgroundImage ? (
         <div
-          className="absolute inset-0 w-full h-full bg-cover bg-center"
+          className="absolute inset-0 w-full h-full bg-cover bg-center opacity-20"
           style={{
             backgroundImage: `url(${backgroundImage})`,
-            zIndex: -2,
+            zIndex: -1,
           }}
         />
-      ) : (
-        <div
-          className="absolute inset-0 w-full h-full bg-cover bg-center"
-          style={{
-            backgroundImage: `url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F4aa3c3e0f0ba44ad82f543d587028528?format=webp&width=800)`,
-            zIndex: -2,
-          }}
-        />
-      )}
+      ) : null}
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/50" style={{ zIndex: -1 }} />
-
-      {/* Content */}
-      <div className="hero-content relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="max-w-4xl mx-auto">
-          {/* SaintSAL Logo */}
-          <div className="hero-logo mb-8">
+      {/* Main Content */}
+      <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto">
+          {/* Logo with Animation */}
+          <div
+            className={`mb-12 transition-all duration-1000 ${isLoaded ? "opacity-100 transform translate-y-0" : "opacity-0 transform translate-y-8"}`}
+          >
             <SaintSALLogo
               variant="combined"
               size="lg"
-              showTagline={true}
-              className="mb-4"
+              showTagline={false}
+              className="mb-6"
             />
+            <div className="text-caption text-neutral-400 tracking-wider">
+              INSTITUTIONAL INTELLIGENCE PLATFORM
+            </div>
           </div>
 
-          <h1 className="hero-title text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight">
-            {title}
+          {/* Main Headline */}
+          <h1
+            className={`text-display-2xl text-white mb-8 transition-all duration-1000 delay-300 ${isLoaded ? "opacity-100 transform translate-y-0" : "opacity-0 transform translate-y-8"}`}
+          >
+            <span className="text-gradient-primary">{title}</span>
           </h1>
 
-          <p className="hero-subtitle text-lg sm:text-xl lg:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
+          {/* Subtitle */}
+          <p
+            className={`text-body-lg text-neutral-300 mb-12 max-w-4xl mx-auto leading-relaxed transition-all duration-1000 delay-500 ${isLoaded ? "opacity-100 transform translate-y-0" : "opacity-0 transform translate-y-8"}`}
+          >
             {subtitle}
           </p>
 
-          <div className="hero-actions flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          {/* CTA Buttons */}
+          <div
+            className={`flex flex-col sm:flex-row gap-6 justify-center items-center mb-16 transition-all duration-1000 delay-700 ${isLoaded ? "opacity-100 transform translate-y-0" : "opacity-0 transform translate-y-8"}`}
+          >
             <button
               onClick={handlePrimaryAction}
-              className="primary-cta-button bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-black font-bold px-10 py-4 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl border-2 border-yellow-400"
+              className="btn-primary text-lg px-8 py-4 min-w-[200px] group relative overflow-hidden"
             >
-              {primaryButtonText}
+              <span className="relative z-10">{primaryButtonText}</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary-500 to-primary-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
             </button>
 
             {secondaryButtonText && (
               <button
-                onClick={() => setIsVideoModalOpen(true)}
-                className="secondary-cta-button border-2 border-yellow-400 text-yellow-300 hover:bg-yellow-400 hover:text-black font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm"
+                onClick={handleSecondaryAction}
+                className="btn-secondary text-lg px-8 py-4 min-w-[200px] group glass"
               >
-                {secondaryButtonText}
+                <span className="flex items-center gap-2">
+                  <svg
+                    className="w-5 h-5 group-hover:animate-pulse"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M8 5v10l8-5z" />
+                  </svg>
+                  {secondaryButtonText}
+                </span>
               </button>
             )}
           </div>
 
-          {/* Key Features Pills */}
-          <div className="key-features flex flex-wrap justify-center gap-4 text-sm">
-            <div className="feature-pill bg-gradient-to-r from-yellow-500/20 to-yellow-600/20 backdrop-blur-md text-yellow-100 border border-yellow-400/30 px-6 py-3 rounded-full">
-              ♕ Strategic AI Analytics
+          {/* Trust Indicators */}
+          <div
+            className={`grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto transition-all duration-1000 delay-1000 ${isLoaded ? "opacity-100 transform translate-y-0" : "opacity-0 transform translate-y-8"}`}
+          >
+            <div className="text-center">
+              <div className="text-2xl font-bold text-gradient-gold mb-1">
+                $2.4B+
+              </div>
+              <div className="text-caption text-neutral-400">
+                ASSETS ANALYZED
+              </div>
             </div>
-            <div className="feature-pill bg-gradient-to-r from-yellow-500/20 to-yellow-600/20 backdrop-blur-md text-yellow-100 border border-yellow-400/30 px-6 py-3 rounded-full">
-              ⚡ Investment Sandbox
+            <div className="text-center">
+              <div className="text-2xl font-bold text-gradient-gold mb-1">
+                15,000+
+              </div>
+              <div className="text-caption text-neutral-400">
+                PROPERTIES EVALUATED
+              </div>
             </div>
-            <div className="feature-pill bg-gradient-to-r from-yellow-500/20 to-yellow-600/20 backdrop-blur-md text-yellow-100 border border-yellow-400/30 px-6 py-3 rounded-full">
-              🔗 CRM Integration
+            <div className="text-center">
+              <div className="text-2xl font-bold text-gradient-gold mb-1">
+                94%
+              </div>
+              <div className="text-caption text-neutral-400">ACCURACY RATE</div>
             </div>
-            <div className="feature-pill bg-gradient-to-r from-yellow-500/20 to-yellow-600/20 backdrop-blur-md text-yellow-100 border border-yellow-400/30 px-6 py-3 rounded-full">
-              📱 Enterprise Grade
+            <div className="text-center">
+              <div className="text-2xl font-bold text-gradient-gold mb-1">
+                24/7
+              </div>
+              <div className="text-caption text-neutral-400">AI MONITORING</div>
+            </div>
+          </div>
+
+          {/* Floating Action Hint */}
+          <div
+            className={`mt-16 transition-all duration-1000 delay-1200 ${isLoaded ? "opacity-100 transform translate-y-0" : "opacity-0 transform translate-y-8"}`}
+          >
+            <div className="animate-bounce">
+              <svg
+                className="w-6 h-6 mx-auto text-neutral-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                />
+              </svg>
+            </div>
+            <div className="text-caption text-neutral-500 mt-2">
+              EXPLORE INTELLIGENCE PLATFORM
             </div>
           </div>
         </div>
       </div>
 
-      {/* Video Modal */}
+      {/* Premium Video Modal */}
       {isVideoModalOpen && (
-        <div className="video-modal fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
-          <div className="modal-content bg-white rounded-lg max-w-4xl w-full max-h-full overflow-hidden">
-            <div className="modal-header flex justify-between items-center p-6 border-b">
-              <h3 className="text-xl font-semibold">
-                SaintSAL™ Platform Demo
-              </h3>
+        <div
+          className="fixed inset-0 bg-black/90 backdrop-blur-md flex items-center justify-center z-50 p-4 animate-fade-in-scale"
+          onClick={() => setIsVideoModalOpen(false)}
+        >
+          <div
+            className="card-premium max-w-5xl w-full max-h-[90vh] overflow-hidden animate-fade-in-up"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex justify-between items-center p-6 border-b border-neutral-200">
+              <div>
+                <h3 className="text-headline-md text-neutral-900 mb-1">
+                  Platform Intelligence Demo
+                </h3>
+                <p className="text-body-sm text-neutral-600">
+                  Advanced AI analytics in action
+                </p>
+              </div>
               <button
                 onClick={() => setIsVideoModalOpen(false)}
-                className="close-button text-gray-500 hover:text-gray-700 text-2xl font-bold"
+                className="w-10 h-10 rounded-full bg-neutral-100 hover:bg-neutral-200 flex items-center justify-center transition-colors"
               >
-                ×
+                <svg
+                  className="w-5 h-5 text-neutral-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
               </button>
             </div>
-            <div className="modal-body p-6">
-              <div className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
-                <p className="text-gray-600">
-                  Demo video will be embedded here
-                </p>
+            <div className="p-6">
+              <div className="aspect-video bg-gradient-to-br from-neutral-100 to-neutral-200 rounded-xl flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-600/20 to-gold-500/20" />
+                <div className="relative z-10 text-center">
+                  <div className="w-20 h-20 mx-auto mb-4 bg-primary-600 rounded-full flex items-center justify-center">
+                    <svg
+                      className="w-8 h-8 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M8 5v10l8-5z" />
+                    </svg>
+                  </div>
+                  <h4 className="text-headline-sm text-neutral-800 mb-2">
+                    Intelligence Demo
+                  </h4>
+                  <p className="text-body-md text-neutral-600">
+                    Real-time AI analytics and strategic insights
+                  </p>
+                </div>
               </div>
             </div>
           </div>
