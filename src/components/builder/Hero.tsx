@@ -111,17 +111,17 @@ export default function Hero({
 
           {/* Key Features Pills */}
           <div className="key-features flex flex-wrap justify-center gap-4 text-sm">
-            <div className="feature-pill bg-white/10 backdrop-blur-md text-white px-4 py-2 rounded-full">
-              🤖 AI-Powered Analytics
+            <div className="feature-pill bg-gradient-to-r from-yellow-500/20 to-yellow-600/20 backdrop-blur-md text-yellow-100 border border-yellow-400/30 px-6 py-3 rounded-full">
+              ♕ Strategic AI Analytics
             </div>
-            <div className="feature-pill bg-white/10 backdrop-blur-md text-white px-4 py-2 rounded-full">
-              📊 Investment Sandbox
+            <div className="feature-pill bg-gradient-to-r from-yellow-500/20 to-yellow-600/20 backdrop-blur-md text-yellow-100 border border-yellow-400/30 px-6 py-3 rounded-full">
+              ⚡ Investment Sandbox
             </div>
-            <div className="feature-pill bg-white/10 backdrop-blur-md text-white px-4 py-2 rounded-full">
+            <div className="feature-pill bg-gradient-to-r from-yellow-500/20 to-yellow-600/20 backdrop-blur-md text-yellow-100 border border-yellow-400/30 px-6 py-3 rounded-full">
               🔗 CRM Integration
             </div>
-            <div className="feature-pill bg-white/10 backdrop-blur-md text-white px-4 py-2 rounded-full">
-              📱 Mobile Optimized
+            <div className="feature-pill bg-gradient-to-r from-yellow-500/20 to-yellow-600/20 backdrop-blur-md text-yellow-100 border border-yellow-400/30 px-6 py-3 rounded-full">
+              📱 Enterprise Grade
             </div>
           </div>
         </div>
