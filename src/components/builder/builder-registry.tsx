@@ -68,7 +68,7 @@ Builder.registerComponent(Hero, {
 });
 
 // Register CTA Component
-builder.registerComponent(CTA, {
+Builder.registerComponent(CTA, {
   name: "CTA",
   inputs: [
     {
@@ -136,7 +136,7 @@ builder.registerComponent(CTA, {
 });
 
 // Register Footer Component
-builder.registerComponent(Footer, {
+Builder.registerComponent(Footer, {
   name: "Footer",
   inputs: [
     {
@@ -185,7 +185,7 @@ builder.registerComponent(Footer, {
 });
 
 // Register FormSection Component
-builder.registerComponent(FormSection, {
+Builder.registerComponent(FormSection, {
   name: "FormSection",
   inputs: [
     {
@@ -236,7 +236,7 @@ builder.registerComponent(FormSection, {
 });
 
 // Register InvestmentSandbox Component
-builder.registerComponent(InvestmentSandbox, {
+Builder.registerComponent(InvestmentSandbox, {
   name: "InvestmentSandbox",
   inputs: [
     {
