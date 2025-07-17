@@ -107,11 +107,11 @@ export default function Hero({
           </div>
 
           {/* Main Headline */}
-          <h1
-            className={`text-display-2xl text-white mb-8 transition-all duration-1000 delay-300 ${isLoaded ? "opacity-100 transform translate-y-0" : "opacity-0 transform translate-y-8"}`}
+          <h2
+            className={`text-display-lg text-white mb-8 transition-all duration-1000 delay-300 ${isLoaded ? "opacity-100 transform translate-y-0" : "opacity-0 transform translate-y-8"}`}
           >
-            <span className="text-gradient-primary">{title}</span>
-          </h1>
+            {subtitle}
+          </h2>
 
           {/* Subtitle */}
           <p
