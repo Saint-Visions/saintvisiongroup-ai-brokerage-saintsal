@@ -256,7 +256,7 @@ export default function InvestmentSandbox({
         {/* Premium Header */}
         <div className="text-center mb-16">
           <div className="text-caption text-primary-600 mb-4 tracking-wider">
-            AI-POWERED INVESTMENT ANALYTICS
+            SAINTSΑL™ AI-POWERED LENDING PLATFORM
           </div>
           <h2 className="text-display-lg text-gradient-primary mb-6">
             {title}
@@ -269,7 +269,7 @@ export default function InvestmentSandbox({
         {/* Strategy Selector */}
         <div className="mb-12">
           <h3 className="text-headline-md text-neutral-900 mb-8 text-center">
-            Investment Strategy Selection
+            Choose Your Loan Program
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {strategies.map((strategy) => (
