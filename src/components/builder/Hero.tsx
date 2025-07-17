@@ -59,8 +59,11 @@ export default function Hero({
         />
       ) : (
         <div
-          className="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900"
-          style={{ zIndex: -2 }}
+          className="absolute inset-0 w-full h-full bg-cover bg-center"
+          style={{
+            backgroundImage: `url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F4aa3c3e0f0ba44ad82f543d587028528?format=webp&width=800)`,
+            zIndex: -2,
+          }}
         />
       )}
 
