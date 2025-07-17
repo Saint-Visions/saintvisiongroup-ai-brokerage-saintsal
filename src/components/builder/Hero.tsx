@@ -15,11 +15,11 @@ interface HeroProps {
 }
 
 export default function Hero({
-  title = "Strategic Real Estate Intelligence",
-  subtitle = "Institutional-grade AI platform trusted by elite investors to maximize returns through data-driven insights and strategic automation.",
-  primaryButtonText = "Access Platform",
+  title = "Saint Vision Group LLC",
+  subtitle = "Premier commercial lending and real estate financing. Fixed-rate loans, bridge financing, construction loans, and investment opportunities. Licensed and regulated with institutional-grade expertise.",
+  primaryButtonText = "Apply for Financing",
   primaryButtonAction = "application",
-  secondaryButtonText = "View Intelligence Demo",
+  secondaryButtonText = "View Loan Programs",
   backgroundVideo,
   backgroundImage,
   showVideo = true,
@@ -97,13 +97,13 @@ export default function Hero({
             className={`mb-12 transition-all duration-1000 ${isLoaded ? "opacity-100 transform translate-y-0" : "opacity-0 transform translate-y-8"}`}
           >
             <SaintSALLogo
-              variant="combined"
+              variant="saint-vision"
               size="lg"
               showTagline={false}
               className="mb-6"
             />
             <div className="text-caption text-neutral-400 tracking-wider">
-              INSTITUTIONAL INTELLIGENCE PLATFORM
+              LICENSED COMMERCIAL LENDER • REAL ESTATE FINANCING
             </div>
           </div>
 
@@ -158,31 +158,29 @@ export default function Hero({
           >
             <div className="text-center">
               <div className="text-2xl font-bold text-gradient-gold mb-1">
-                $2.4B+
+                $500M+
+              </div>
+              <div className="text-caption text-neutral-400">LOANS FUNDED</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-gradient-gold mb-1">
+                2,500+
               </div>
               <div className="text-caption text-neutral-400">
-                ASSETS ANALYZED
+                BORROWERS SERVED
               </div>
             </div>
             <div className="text-center">
               <div className="text-2xl font-bold text-gradient-gold mb-1">
-                15,000+
+                3.5%
               </div>
-              <div className="text-caption text-neutral-400">
-                PROPERTIES EVALUATED
-              </div>
+              <div className="text-caption text-neutral-400">RATES FROM</div>
             </div>
             <div className="text-center">
               <div className="text-2xl font-bold text-gradient-gold mb-1">
-                94%
+                48HR
               </div>
-              <div className="text-caption text-neutral-400">ACCURACY RATE</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-gradient-gold mb-1">
-                24/7
-              </div>
-              <div className="text-caption text-neutral-400">AI MONITORING</div>
+              <div className="text-caption text-neutral-400">APPROVAL TIME</div>
             </div>
           </div>
 
