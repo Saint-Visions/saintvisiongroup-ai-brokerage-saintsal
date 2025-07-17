@@ -10,9 +10,9 @@ export default function Home() {
     <main className="homepage">
       {/* Hero Section */}
       <Hero
-        title="SaintSAL™ - AI-Powered Real Estate Brokerage"
-        subtitle="Transform your real estate investments with AI-driven automation, advanced analytics, and seamless CRM integration. Join the future of property investment."
-        primaryButtonText="Start Your Investment Journey"
+        title="Strategic Real Estate Intelligence"
+        subtitle="Transform your property investments with AI-driven analytics, professional strategy insights, and enterprise-grade automation. Experience the power of strategic thinking in real estate."
+        primaryButtonText="Begin Strategic Analysis"
         primaryButtonAction="application"
         secondaryButtonText="Explore Investment Sandbox"
         showVideo={true}
