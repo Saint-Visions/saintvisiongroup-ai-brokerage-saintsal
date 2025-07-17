@@ -11,7 +11,7 @@ import InvestmentSandbox from "./InvestmentSandbox";
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY!);
 
 // Register Hero Component
-builder.registerComponent(Hero, {
+Builder.registerComponent(Hero, {
   name: "Hero",
   inputs: [
     {
