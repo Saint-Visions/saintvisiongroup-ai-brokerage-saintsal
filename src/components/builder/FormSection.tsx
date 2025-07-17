@@ -137,7 +137,7 @@ export default function FormSection({
               Thank You for Your Application!
             </h2>
             <p className="text-lg text-gray-600 mb-6">
-              We've received your investment application and will review it
+              We&apos;ve received your investment application and will review it
               within 24 hours. Our team will contact you soon to discuss next
               steps.
             </p>
